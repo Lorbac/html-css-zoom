@@ -10,21 +10,123 @@ box-sizing: border-box;
     display:flex
 }
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 /* Fine common */
 
 /* Main */
 
+main {
+    position: relative;
+}
+
+.container {
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: black;
+}
+
+.view_settings {
+    z-index: 9999;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 5%;
+    color: white;
+    padding: 10px 10px 0 0;
+    font-size: 15px;
+}
+
+.speaker_view,
+.change_view {
+    display: inline-block;
+    background-image: linear-gradient(rgb(88, 88, 88),rgb(32, 32, 32));
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.btn_left,
+.btn_right{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: 15%;
+    color: white;
+    font-size: 15px;
+}
+
+.btn_left .fas {
+    font-size: 60px;
+}
+
+.btn_right .fas {
+    font-size: 60px;
+    color: rgb(0, 153, 255);
+}
+
+.user_img_container {
+    width: 80%;
+    height: 90%;
+    flex-wrap: wrap;
+}
+
+.img_user {
+    position: relative;
+    width: calc((100% / 5) - 10px);
+    height: calc((100% /5) - 10px);
+    margin: 5px;
+}
+
+.img_user:nth-child(25) {
+    border: 5px solid lightgreen;
+}
+
+.img_user img {
+    width: 100%;
+    height: 100%;
+}
+
+.layover {
+  position: absolute; 
+  bottom: 0px; 
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 15px;
+  padding: 5px;
+}
 
 
 /* Fine main */
 
 /* Footer */
 
-
+.nav_bar {
+    height: 70px;
+    background-color: rgb(77, 77, 77);
+}
 
 /* Fine footer */
 
 /* Debug */
 
+.debug .user_img_container {
+    background-color: yellow;
+}
+
+.debug .view_settings {
+    background-color: blue;
+}
+
+.debug .btn_left {
+    background-color: red;
+}
+
+.debug .btn_right {
+    background-color: green;
+}
 
 /* Fine debug */
